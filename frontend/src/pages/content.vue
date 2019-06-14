@@ -10,7 +10,7 @@
                             </v-toolbar>
 
                             <v-card-text>
-                                <pre v-highlightjs="sourcecode"><code class="javascript">{{ code }}</code></pre>
+                                <pre highlightjs="sourcecode"><code class="javascript">{{ code }}</code></pre>
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -21,24 +21,25 @@
 </template>
 
 <script>
+    import axios from 'axios';
+    import hljs from 'highlight.js';
     export default {
         name: "Content",
+
         data() {
-                return {
-                    code: "\nfunction changeImage()\n" +
-                        "{\n" +
-                        "    element=document.getElementById('myimage')\n" +
-                        "    if (element.src.match(\"bulbon\"))\n" +
-                        "    {\n" +
-                        "        element.src=\"/images/pic_bulboff.gif\";\n" +
-                        "    }\n" +
-                        "    else\n" +
-                        "    {\n" +
-                        "        element.src=\"/images/pic_bulbon.gif\";\n" +
-                        "    }\n" +
-                        "}\n"
-                }
+            return {
+                code: "No data"
+            }
         },
+
+        mounted() {
+            axios
+                .get('http://localhost:3000/post/' +  this.$route.params.id)
+                .then(response => {
+                    this.$data.code = response.data.content;
+                });
+        },
+
         components: {
 
         }

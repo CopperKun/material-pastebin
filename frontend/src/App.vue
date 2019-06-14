@@ -11,7 +11,7 @@
                         v-for="(link, i) in links"
                         :key="i"
                         :to="link.to"
-                        :active-class="color"
+
                         avatar
                         class="v-list-item"
                 >
