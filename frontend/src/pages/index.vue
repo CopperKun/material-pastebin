@@ -26,7 +26,7 @@
                                 </v-form>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn id="action-btn" color="primary" large>Paste!</v-btn>
+                                <v-btn id="action-btn" color="primary" large onclick="">Paste!</v-btn>
                             </v-card-actions>
                         </v-card>
                     </v-flex>
@@ -36,6 +36,7 @@
 </template>
 
 <script>
+    //import axios from 'axios';
 export default {
   name: "Index",
   data: () => ({
@@ -44,8 +45,12 @@ export default {
     expires: ["A day", "A week", "A month", "A year", "Never"]
   }),
   props: {
-    source: String
+      source: String
+  },
+  methods: {
+
   }
+
 };
 </script>
 

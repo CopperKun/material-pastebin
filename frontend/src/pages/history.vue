@@ -38,7 +38,7 @@
                 ],
 
                 pastes: [
-                    { id: 1, title: 'Hydrogen', author: 'H', time: new Date("2019/1/24 21:00") },
+                    { id: "5cf60b7ddb48234c88513609", title: 'Hydrogen', author: 'H', time: new Date("2019/1/24 21:00") },
                     { id: 2, title: 'Helium', author: 'He', time: new Date("2019/1/24 21:01") },
                     { id: 3, title: 'Lithium', author: 'Li', time: new Date("2019/1/24 21:02") },
                     { id: 4, title: 'Beryllium', author: 'Be', time: new Date("2019/1/24 21:03") },

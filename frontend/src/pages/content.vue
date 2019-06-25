@@ -10,7 +10,7 @@
                             </v-toolbar>
 
                             <v-card-text>
-                                <pre highlightjs="sourcecode"><code class="javascript">{{ code }}</code></pre>
+                                <pre v-highlightjs="code" style="white-space: pre-line"><code class="cpp"></code></pre>
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -22,7 +22,7 @@
 
 <script>
     import axios from 'axios';
-    import hljs from 'highlight.js';
+    //import hljs from 'highlight.js';
     export default {
         name: "Content",
 
